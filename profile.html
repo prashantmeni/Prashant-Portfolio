@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Prashant M, a Web Developer and ECE student showcasing projects and skills in web development and IoT." />
+  <meta name="keywords" content="Prashant M, Web Developer, Portfolio, ECE, IoT, Web Development" />
+  <meta property="og:title" content="Prashant M - Portfolio" />
+  <meta property="og:description" content="Explore the projects and skills of Prashant M, a Web Developer and ECE student." />
+  <meta property="og:image" content="/images/profile.jpg" />
+  <title>Prashant M - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+    }
+
+    /* Section Reveal Animation */
+    [data-section] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    [data-section].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-section] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* Search Bar Animations */
+    .search-bar-wrapper {
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #searchInput {
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      padding-right: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    #searchInput:focus {
+      width: 105%;
+      background-color: #4b5563;
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(124, 58, 237, 0.7), 0 0 25px rgba(124, 58, 237, 0.3); }
+      50% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.9), 0 0 35px rgba(124, 58, 237, 0.5); }
+    }
+
+    #searchInput::placeholder {
+      opacity: 0.7;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #searchInput:focus::placeholder {
+      opacity: 0;
+    }
+
+    .search-icon {
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    #searchInput:focus + .search-icon {
+      transform: translate(-0.5rem, -50%);
+      color: #7c3aed;
+    }
+
+    #searchSpinner {
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    #searchSpinner.active {
+      opacity: 1;
+    }
+
+    /* Neon Rotating Border */
+    .search-bar-wrapper.searching::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 9999px;
+      background: linear-gradient(
+        45deg,
+        #7c3aed,
+        #ec4899,
+        #3b82f6,
+        #22d3ee,
+        #7c3aed
+      );
+      background-size: 400%;
+      z-index: 0;
+      animation: rotateBorder 3s linear infinite;
+      opacity: 0.9;
+      filter: blur(1.5px);
+    }
+
+    .search-bar-wrapper.searching::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 9999px;
+      background: #1f2937;
+      z-index: 0;
+    }
+
+    .light-theme .search-bar-wrapper.searching::after {
+      background: #d1d5db;
+    }
+
+    @keyframes rotateBorder {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 400% 50%; }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 640px) {
+      #searchInput:focus {
+        width: 100%;
+      }
+      .search-bar-wrapper.searching::before {
+        filter: blur(1px);
+      }
+    }
+
+    /* Light Theme */
+    .light-theme {
+      background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb, #d1d5db);
+      color: #1f2937;
+    }
+    .light-theme .bg-gray-900 { background-color: #e5e7eb; }
+    .light-theme .bg-gray-800 { background-color: #d1d5db; }
+    .light-theme .text-gray-300 { color: #374151; }
+    .light-theme .text-purple-400 { color: #6b7280; }
+    .light-theme .text-purple-500 { color: #4b5563; }
+    .light-theme .bg-purple-600 { background-color: #7c3aed; }
+    .light-theme .hover\:bg-purple-700:hover { background-color: #6d28d9; }
+    .light-theme .bg-white { background-color: #f3f4f6; }
+    .light-theme .text-purple-700 { color: #4b5563; }
+    .light-theme .hover\:text-purple-900:hover { color: #3b82f6; }
+
+    /* Text Animation */
+    .animated-text {
+      display: inline-block;
+      min-width: 160px;
+      text-align: left;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+    .fade-out { opacity: 0; }
+    .fade-in { opacity: 1; }
+
+    /* Responsive Design */
+    @media (max-width: 640px) {
+      .animated-text { min-width: 120px; }
+      h1 {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-size: 2.5rem;
+      }
+      .grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 480px) {
+      .min-w-[250px] { min-width: 200px; }
+      .text-4xl { font-size: 2rem; }
+      .text-3xl { font-size: 1.5rem; }
+    }
+
+    /* Scrollbar Hide */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-purple-900 text-white scroll-smooth">
+  <noscript>
+    <p class="text-center text-red-500 p-4">JavaScript is disabled. Some features like search and animations may not work.</p>
+  </noscript>
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+    <!-- Theme Toggle and Search Bar -->
+    <div class="w-full max-w-5xl flex justify-between items-center mb-8" data-section>
+      <div class="relative w-full max-w-md search-bar-wrapper">
+        <input type="text" id="searchInput" placeholder="Search projects or certificates..." class="w-full px-4 py-2 rounded-full bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300 ease-in-out" aria-label="Search projects and certificates" />
+        <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 search-icon transition-all duration-300"></i>
+        <div id="searchSpinner" class="absolute right-10 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity duration-300">
+          <i class="fas fa-spinner fa-spin text-gray-400"></i>
+        </div>
+        <div id="searchStatus" class="sr-only" aria-live="polite"></div>
+      </div>
+      <button id="themeToggle" class="ml-4 p-2 rounded-full bg-gray-800 hover:bg-gray-700" aria-label="Toggle theme">
+        <i id="themeIcon" class="fas fa-moon text-gray-200"></i>
+      </button>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="w-32 h-32 mb-6 rounded-full bg-gray-700 border-4 border-purple-600 overflow-hidden" data-section>
+      <img src="/images/profile.jpg" alt="Profile picture of Prashant M" class="w-full h-full object-cover" loading="lazy" />
+    </div>
+
+    <!-- About Section -->
+    <div class="max-w-4xl w-full text-center" data-section>
+      <h2 class="text-purple-400 text-lg mb-2">About Me</h2>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4 inline-flex flex-wrap justify-center items-center">
+        <span>Hello, I'm </span>
+        <span class="text-purple-500 animated-text" id="animatedText"></span>
+      </h1>
+      <p class="text-gray-300 mb-6">I'm a Web Developer and ECE student with experience in building user-friendly websites and IoT projects using HTML, CSS, JavaScript, and Arduino.</p>
+      <div class="flex justify-center gap-4 mb-10">
+        <a href="#projects" class="bg-white text-purple-700 hover:text-purple-900 px-6 py-2 rounded-full">View Projects</a>
+        <a href="#flex space-x-6 text-2xl" class="bg-white text-purple-700 hover:text-purple-900 px-6 py-2 rounded-full">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl w-full mb-16" data-section>
+      <div class="bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+        <p class="text-3xl font-bold text-purple-500 counter" data-target="3">0</p>
+        <p class="mt-2 text-gray-300">Total Projects</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+        <p class="text-3xl font-bold text-purple-500 counter" data-target="4">0</p>
+        <p class="mt-2 text-gray-300">Certificates</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+        <p class="text-3xl font-bold text-purple-500 counter" data-target="0.3">0</p>
+        <p class="mt-2 text-gray-300">Years of Experience</p>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-5xl w-full mb-16" data-section>
+      <h2 class="text-3xl font-bold text-center text-purple-400 mb-8">Projects</h2>
+      <div class="relative overflow-hidden">
+        <div id="projectList" class="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth px-4 snap-x snap-mandatory">
+          <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center project-item snap-center">
+            <img src="/images/smart-home.jpg" alt="Smart Home project using Arduino Uno" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <p class="text-gray-300 text-center">Smart Home Using Arduino Uno</p>
+          </div>
+          <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center project-item snap-center">
+            <img src="/images/iot-agri.png" alt="IoT-based agriculture monitoring system" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <p class="text-gray-300 text-center">IoT Based Agriculture Monitoring</p>
+          </div>
+          <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center project-item snap-center">
+            <img src="/images/microbit-pwd.jpg" alt="Communication device for PWD using Micro:Bit" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <p class="text-gray-300 text-center">Communication Device for PWD using Micro:Bit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="max-w-5xl w-full mb-16" data-section>
+      <h2 class="text-3xl font-bold text-center text-purple-400 mb-8">Certificates</h2>
+      <div class="relative overflow-hidden">
+        <div id="certificateList" class="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth px-4 snap-x snap-mandatory">
+          <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center certificate-item snap-center">
+            <img src="/images/certificate-frontend.jpg" alt="Frontend Development certificate from Coursera" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <p class="text-gray-300 text-center">Frontend Development - Coursera</p>
+          </div>
+          <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center certificate-item snap-center">
+            <img src="/images/certificate-js.jpg" alt="JavaScript Essentials certificate from Udemy" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <p class="text-gray-300 text-center">JavaScript Essentials - Udemy</p>
+          </div>
+          <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center certificate-item snap-center">
+            <img src="/images/certificate-responsive.jpg" alt="Responsive Web Design certificate from freeCodeCamp" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <p class="text-gray-300 text-center">Responsive Web Design - freeCodeCamp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="max-w-5xl w-full mb-16" data-section>
+      <h2 class="text-3xl font-bold text-center text-purple-400 mb-8">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center text-gray-200">
+        <div class="bg-gray-800 p-4 rounded-lg">HTML</div>
+        <div class="bg-gray-800 p-4 rounded-lg">CSS</div>
+        <div class="bg-gray-800 p-4 rounded-lg">JavaScript</div>
+        <div class="bg-gray-800 p-4 rounded-lg">Tailwind CSS</div>
+        <div class="bg-gray-800 p-4 rounded-lg">React</div>
+        <div class="bg-gray-800 p-4 rounded-lg">Git & GitHub</div>
+        <div class="bg-gray-800 p-4 rounded-lg">PCB Design</div>
+        <div class="bg-gray-800 p-4 rounded-lg">Web Development</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-900 text-gray-300 py-8" data-section>
+      <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <p class="text-sm">© 2025 Prashant M. All rights reserved.</p>
+        <div class="flex space-x-6 text-2xl">
+          <a href="https://www.instagram.com/prashant_meni" target="_blank" class="hover:text-purple-400" aria-label="Instagram profile"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/+1234567890" target="_blank" class="hover:text-green-400" aria-label="WhatsApp contact"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/prashant-meni" target="_blank" class="hover:text-blue-400" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/prashant-meni" target="_blank" class="hover:text-gray-400" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+          <a href="mailto:prashant.meni@example.com" class="hover:text-blue-400" aria-label="Email contact"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 p-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white hidden" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      themeIcon.classList.toggle('fa-moon', !body.classList.contains('light-theme'));
+      themeIcon.classList.toggle('fa-sun', body.classList.contains('light-theme'));
+      localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+    });
+
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-theme');
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Search Filter with Debounce
+    const searchInput = document.getElementById('searchInput');
+    const searchSpinner = document.getElementById('searchSpinner');
+    const searchWrapper = document.querySelector('.search-bar-wrapper');
+    const searchStatus = document.getElementById('searchStatus');
+    const projectItems = document.querySelectorAll('.project-item');
+    const certificateItems = document.querySelectorAll('.certificate-item');
+
+    const debounce = (func, wait) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    };
+
+    searchInput.addEventListener('input', debounce(() => {
+      searchWrapper.classList.add('searching');
+      searchSpinner.classList.add('active');
+      const searchTerm = searchInput.value.toLowerCase();
+      let visibleProjects = 0;
+      let visibleCertificates = 0;
+
+      projectItems.forEach(item => {
+        const text = item.querySelector('p').textContent.toLowerCase();
+        item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+        if (text.includes(searchTerm)) visibleProjects++;
+      });
+
+      certificateItems.forEach(item => {
+        const text = item.querySelector('p').textContent.toLowerCase();
+        item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+        if (text.includes(searchTerm)) visibleCertificates++;
+      });
+
+      searchStatus.textContent = `Found ${visibleProjects} projects and ${visibleCertificates} certificates`;
+      setTimeout(() => {
+        searchSpinner.classList.remove('active');
+        searchWrapper.classList.remove('searching');
+      }, 500);
+    }, 300));
+
+    // Text Animation
+    const animatedText = document.getElementById('animatedText');
+    const texts = [' Prashant Meni', ' ECE Student', ' Programer'];
+    let currentIndex = 0;
+    let charIndex = 0;
+
+    function typeWriter() {
+      if (charIndex < texts[currentIndex].length) {
+        animatedText.textContent += texts[currentIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 125);
+      } else {
+        setTimeout(eraseText, 3000);
+      }
+    }
+
+    function eraseText() {
+      if (charIndex > 0) {
+        animatedText.textContent = texts[currentIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseText, 125);
+      } else {
+        currentIndex = (currentIndex + 1) % texts.length;
+        setTimeout(typeWriter, 500);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', typeWriter);
+
+    // Counter Animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const isDecimal = target % 1 !== 0;
+        const step = isDecimal ? 0.01 : 1;
+        const duration = 1000;
+        const increment = target / (duration / (isDecimal ? 20 : 30));
+        let current = 0;
+
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            counter.innerText = isDecimal ? current.toFixed(2) : Math.ceil(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.innerText = isDecimal ? target.toFixed(2) : target;
+          }
+        };
+
+        updateCounter();
+      });
+    });
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('hidden', window.scrollY < 300);
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Section Reveal Animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('[data-section]');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target); // Stop observing once visible
+            }
+          });
+        },
+        {
+          threshold: 0.1, // Trigger when 10% of section is visible
+          rootMargin: '0px 0px -50px 0px' // Slight offset for smoother reveal
+        }
+      );
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html>
