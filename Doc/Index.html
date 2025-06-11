@@ -483,4 +483,12 @@
         },
         {
           threshold: 0.1, // Trigger when 10% of section is visible
-          rootMargin
+          rootMargin: '0px 0px -50px 0px' // Slight offset for smoother reveal
+        }
+      );
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html>
