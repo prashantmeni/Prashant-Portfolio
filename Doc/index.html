@@ -239,7 +239,7 @@
       <p class="text-gray-300 mb-6">I'm a Web Developer and ECE student with experience in building user-friendly websites and IoT projects using HTML, CSS, JavaScript, and Arduino.</p>
       <div class="flex justify-center gap-4 mb-10">
         <a href="#projects" class="bg-white text-purple-700 hover:text-purple-900 px-6 py-2 rounded-full">View Projects</a>
-        <a href="#flex space-x-6 text-2xl" class="bg-white text-purple-700 hover:text-purple-900 px-6 py-2 rounded-full">Contact Me</a>
+        <a href="#contact" class="bg-white text-purple-700 hover:text-purple-900 px-6 py-2 rounded-full">Contact Me</a>
       </div>
     </div>
 
@@ -285,8 +285,11 @@
       <h2 class="text-3xl font-bold text-center text-purple-400 mb-8">Certificates</h2>
       <div class="relative overflow-hidden">
         <div id="certificateList" class="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth px-4 snap-x snap-mandatory">
+          <!-- FIX: Use a placeholder image for PDF and link to PDF -->
           <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center certificate-item snap-center">
-            <img src="Doc/Certificates/3rd sem mooc Certificate.pdf" alt="Frontend Development certificate from Coursera" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            <a href="Doc/Certificates/3rd sem mooc Certificate.pdf" target="_blank">
+              <img src="/images/certificate-placeholder.jpg" alt="Frontend Development certificate from Coursera" class="w-full h-32 object-cover rounded-md mb-3" loading="lazy" />
+            </a>
             <p class="text-gray-300 text-center">Frontend Development - Coursera</p>
           </div>
           <div class="min-w-[250px] bg-gray-800 p-4 rounded-lg shadow-md flex-shrink-0 flex flex-col items-center certificate-item snap-center">
@@ -313,6 +316,18 @@
         <div class="bg-gray-800 p-4 rounded-lg">Git & GitHub</div>
         <div class="bg-gray-800 p-4 rounded-lg">PCB Design</div>
         <div class="bg-gray-800 p-4 rounded-lg">Web Development</div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-5xl w-full mb-16" data-section>
+      <h2 class="text-3xl font-bold text-center text-purple-400 mb-8">Contact Me</h2>
+      <div class="flex justify-center gap-6 text-2xl">
+        <a href="https://www.instagram.com/prashant_meni" target="_blank" class="hover:text-purple-400" aria-label="Instagram profile"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+1234567890" target="_blank" class="hover:text-green-400" aria-label="WhatsApp contact"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/prashant-meni" target="_blank" class="hover:text-blue-400" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/prashant-meni" target="_blank" class="hover:text-gray-400" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+        <a href="mailto:prashant.meni@example.com" class="hover:text-blue-400" aria-label="Email contact"><i class="fas fa-envelope"></i></a>
       </div>
     </section>
 
@@ -450,45 +465,4 @@
       });
     });
 
-    // Smooth Scroll for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    // Back to Top Button
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('hidden', window.scrollY < 300);
-    });
-
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Section Reveal Animation
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('[data-section]');
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target); // Stop observing once visible
-            }
-          });
-        },
-        {
-          threshold: 0.1, // Trigger when 10% of section is visible
-          rootMargin: '0px 0px -50px 0px' // Slight offset for smoother reveal
-        }
-      );
-
-      sections.forEach(section => observer.observe(section));
-    });
-  </script>
-</body>
-</html>
+    
