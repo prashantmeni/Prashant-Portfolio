@@ -277,10 +277,62 @@ ul { list-style: none; }
 /* ================= SKILLS ================= */
 .skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
 .skill-category h3 { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem; }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-.skill-tags span {
-    background: var(--bg-light); color: var(--accent); font-family: var(--font-mono);
-    font-size: 0.8rem; padding: 0.4rem 0.8rem; border-radius: 4px;
+/* ================= SKILL BARS ================= */
+.skill-box {
+    margin-bottom: 1.2rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.percent {
+    color: var(--accent);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-light); /* Dark empty track */
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-fill {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    width: 0%; /* Starts at 0 for animation */
+    position: relative;
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1); /* Smooth easing */
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Add a shiny glass effect to the bar */
+.skill-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    100% { transform: translateX(100%); }
+}
+
+/* ANIMATION TRIGGER: When the section gets the 'active' class from JS */
+.reveal.active .skill-fill {
+    width: var(--w); /* Expands to the percentage defined in HTML */
 }
 
 /* ================= PROJECTS (Grid) ================= */
@@ -422,5 +474,6 @@ ul { list-style: none; }
     .cert-icon { margin-bottom: 0.5rem; }
 
 }
+
 
 
