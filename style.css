@@ -113,7 +113,7 @@ ul { list-style: none; }
     align-items: center;
     position: relative;
     /* Ensure image is background.png */
-    background: url('Doc/Images/background.png') center center / 100% 100% no-repeat;
+    background: url('Doc/Images/background.png') center center / cover no-repeat;
 }
 
 .hero-overlay {
@@ -479,6 +479,7 @@ ul { list-style: none; }
     .cert-icon { margin-bottom: 0.5rem; }
 
 }
+
 
 
 
