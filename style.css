@@ -274,65 +274,70 @@ ul { list-style: none; }
 .stat-item h3 { font-size: 1.8rem; color: var(--accent); }
 .stat-item p { font-size: 0.8rem; font-family: var(--font-mono); }
 
-/* ================= SKILLS ================= */
-.skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-.skill-category h3 { margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem; }
-/* ================= SKILL BARS ================= */
+/* ================= SKILL BARS STYLING ================= */
+
+/* Layout for the 3 columns */
+.skills-wrapper { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 3rem; 
+}
+
+.skill-category h3 { 
+    margin-bottom: 1.5rem; 
+    color: var(--text-primary); 
+    font-size: 1.2rem; 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
 .skill-box {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .skill-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.4rem;
-    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-mono); /* Tech font */
     font-size: 0.85rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 .percent {
     color: var(--accent);
+    font-weight: 600;
 }
 
+/* The background track of the bar */
 .skill-bar {
     width: 100%;
     height: 8px;
-    background: var(--bg-light); /* Dark empty track */
+    background: #112240; /* Dark blue background */
     border-radius: 4px;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(100, 255, 218, 0.1);
 }
 
+/* The filled part of the bar */
 .skill-fill {
     display: block;
     height: 100%;
-    background: var(--accent);
+    background: var(--accent); /* Cyber Green */
     border-radius: 4px;
-    width: 0%; /* Starts at 0 for animation */
+    width: 0%; /* Start at 0 width for animation */
     position: relative;
-    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1); /* Smooth easing */
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1); /* Smooth expansion */
     box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* Add a shiny glass effect to the bar */
-.skill-fill::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transform: translateX(-100%);
-    animation: shine 2s infinite;
-}
-
-@keyframes shine {
-    100% { transform: translateX(100%); }
-}
-
-/* ANIMATION TRIGGER: When the section gets the 'active' class from JS */
+/* ANIMATION LOGIC: 
+   The JavaScript adds the class 'active' to the section when you scroll to it.
+   This CSS rule tells the bar to expand to the width set in the HTML variable (--w) 
+*/
 .reveal.active .skill-fill {
-    width: var(--w); /* Expands to the percentage defined in HTML */
+    width: var(--w);
 }
 
 /* ================= PROJECTS (Grid) ================= */
@@ -474,6 +479,7 @@ ul { list-style: none; }
     .cert-icon { margin-bottom: 0.5rem; }
 
 }
+
 
 
 
