@@ -1,376 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prashant Meni | IoT & Embedded Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="https://img.icons8.com/color/48/microchip.png" type="image/png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashant Meni | IoT & Embedded Engineer</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="scroll-progress"></div>
+  <div id="scroll-progress"></div>
 
-<nav class="techno-nav">
-  <div class="nav-container container">
-    <div class="brand-logo">&lt;Prashant /&gt;</div>
+  <nav class="techno-nav">
+    <div class="nav-container container">
+      <div class="brand-logo">&lt;Prashant_Reddy/&gt;</div>
 
-    <div class="nav-center-links">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Stack</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#education" class="nav-link">Education</a>
-      <a href="#certifications" class="nav-link">Certificates</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </div>
+      <!-- Mobile nav toggle (visible on small screens) -->
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><i
+          class="fas fa-bars"></i></button>
 
-    <div class="nav-right-actions">
-      <a href="1CR24EC414_Prashant Meni_Resume.pdf" download class="btn-nav-primary">
-        Resume <i class="fas fa-download"></i>
-      </a>
-    </div>
-  </div>
-</nav>
+      <div class="nav-center-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Stack</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#certifications" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
 
-<header class="hero-section">
-  <div class="hero-overlay"></div>
-  
-  <div class="tech-grid"></div>
-
-  <div class="hero-content container reveal">
-    <p class="hero-subtitle">Hello, I am</p>
-    <h1 class="hero-title">Prashant Meni</h1>
-    <h2 class="hero-typing">I build <span id="typing-text"></span></h2>
-    <p class="hero-desc">
-      Electronics & Communication Engineer bridging the gap between 
-      <span class="highlight-code">Hardware</span> and <span class="highlight-code">Intelligence</span>.
-    </p>
-    
-    <div class="hero-buttons">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#contact" class="btn-outline">Contact Me</a>
-    </div>
-  </div>
-</header>
-
-<section id="about" class="section-dark reveal">
-  <div class="container about-wrapper">
-    <div class="profile-container">
-      <div class="profile-card">
-        <img src="images/profile.png" alt="Prashant Meni" class="profile-img">
+      <div class="nav-right-actions">
+        <a href="Doc/Resume/1CR24EC414_Prashant Meni_Resume.pdf" download class="btn-nav-primary">
+          Resume <i class="fas fa-download"></i>
+        </a>
       </div>
     </div>
-    
-    <div class="about-content">
-      <div class="section-tag">&lt;AboutMe /&gt;</div>
-      <h2>Engineering The Future</h2>
-      <p>
-        I am a B.E. student at CMR Institute of Technology with a passion for embedded systems. 
-        Unlike traditional developers, I understand the silicon that runs the code. 
-        From <strong>circuit design</strong> to <strong>cloud integration</strong>, I build full-stack IoT solutions.
+  </nav>
+
+  <header class="hero-section">
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content container reveal">
+      <p class="hero-subtitle">Hello, I am</p>
+      <h1 class="hero-title">Prashant Meni</h1>
+      <h2 class="hero-typing">I build <span id="typing-text"></span></h2>
+      <p class="hero-desc">
+        Electronics & Communication Engineer bridging the gap between
+        <span class="highlight-code">Hardware</span> and <span class="highlight-code">Intelligence</span>.
       </p>
-      
-      <div class="stats-grid">
-        <div class="stat-item">
-          <h3>2027</h3>
-          <p>Graduation</p>
-        </div>
-        <div class="stat-item">
-          <h3>5+</h3>
-          <p>Major Projects</p>
-        </div>
-        <div class="stat-item">
-          <h3>3+</h3>
-          <p>Years in Electronics</p>
-        </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="skills" class="section-dark reveal">
-  <div class="container">
-    <h2 class="section-header"><span class="text-accent">02.</span> Technical Arsenal</h2>
-    
-    <div class="skills-wrapper">
-      
-      <div class="skill-category">
-        <h3><i class="fas fa-code"></i> Languages</h3>
-        <div class="skill-box">
-          <div class="skill-info"><p>Python</p><p class="percent">90%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 90%"></span></div>
-        </div>
-        <div class="skill-box">
-          <div class="skill-info"><p>C / C++</p><p class="percent">85%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 85%"></span></div>
-        </div>
-        <div class="skill-box">
-          <div class="skill-info"><p>Verilog</p><p class="percent">75%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 75%"></span></div>
+    <div class="tech-grid"></div>
+  </header>
+
+  <section id="about" class="section-dark reveal">
+    <div class="container about-wrapper">
+      <div class="profile-container">
+        <div class="profile-card">
+          <img src="images\profile.png" alt="Prashant Meni" class="profile-img">
         </div>
       </div>
 
-      <div class="skill-category">
-        <h3><i class="fas fa-microchip"></i> Hardware & IoT</h3>
-        <div class="skill-box">
-          <div class="skill-info"><p>Arduino / ESP32</p><p class="percent">95%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 95%"></span></div>
-        </div>
-        <div class="skill-box">
-          <div class="skill-info"><p>Circuit Design</p><p class="percent">80%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 80%"></span></div>
-        </div>
-        <div class="skill-box">
-          <div class="skill-info"><p>Sensors (MQ2, DHT)</p><p class="percent">90%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 90%"></span></div>
-        </div>
-      </div>
+      <div class="about-content">
+        <div class="section-tag">&lt;AboutMe/&gt;</div>
+        <h2>Engineering The Future</h2>
+        <p>
+          I am a B.E. student at CMR Institute of Technology with a passion for embedded systems.
+          Unlike traditional developers, I understand the silicon that runs the code.
+          From <strong>circuit design</strong> to <strong>cloud integration</strong>, I build full-stack IoT solutions.
+        </p>
 
-      <div class="skill-category">
-        <h3><i class="fas fa-tools"></i> Tools</h3>
-        <div class="skill-box">
-          <div class="skill-info"><p>MATLAB</p><p class="percent">85%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 85%"></span></div>
-        </div>
-        <div class="skill-box">
-          <div class="skill-info"><p>KiCad / Multisim</p><p class="percent">75%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 75%"></span></div>
-        </div>
-        <div class="skill-box">
-          <div class="skill-info"><p>Git & GitHub</p><p class="percent">80%</p></div>
-          <div class="skill-bar"><span class="skill-fill" style="--w: 80%"></span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section-dark reveal">
-  <div class="container">
-    <h2 class="section-header"><span class="text-accent">03.</span> Featured Projects</h2>
-    
-    <div class="projects-grid">
-      
-      <article class="project-card" data-title="PWD Communication Device" 
-               data-desc="Assistive technology using Micro:Bit to help persons with disabilities communicate." 
-               data-tech="Python, Micro:Bit" data-img="Doc/Projects/pwd_project.jpg">
-        <div class="card-header">
-          <i class="far fa-folder-open folder-icon"></i>
-          <div class="card-links">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>2027</h3>
+            <p>Graduation</p>
+          </div>
+          <div class="stat-item">
+            <h3>5+</h3>
+            <p>Major Projects</p>
+          </div>
+          <div class="stat-item">
+            <h3>0.3+</h3>
+            <p>Years in Electronics</p>
           </div>
         </div>
-        <h3 class="card-title">PWD Assistive Device</h3>
-        <div class="card-desc">
-          A Micro:Bit based system converting slight movements into text communication.
-        </div>
-        <div class="card-tech-list">
-          <span>Python</span>
-          <span>Micro:Bit</span>
-          <span>Embedded</span>
-        </div>
-      </article>
+      </div>
+    </div>
+  </section>
 
-      <article class="project-card" data-title="Smart Agriculture" 
-               data-desc="IoT System for soil monitoring and automated irrigation." 
-               data-tech="C++, ESP8266, Blynk" data-img="Doc/Projects/agri_project.jpg">
-        <div class="card-header">
-          <i class="far fa-folder-open folder-icon"></i>
-          <div class="card-links">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+  <section id="skills" class="section-dark reveal">
+    <div class="container">
+      <h2 class="section-header"><span class="text-accent">02.</span> Technical Arsenal</h2>
+
+      <div class="skills-wrapper">
+
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>Python</p>
+              <p class="percent">90%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 90%"></span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>C / C++</p>
+              <p class="percent">85%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 85%"></span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>Verilog</p>
+              <p class="percent">75%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 75%"></span>
+            </div>
           </div>
         </div>
-        <h3 class="card-title">Smart Agriculture</h3>
-        <div class="card-desc">
-          Automated irrigation system using soil moisture sensors and cloud logging via Blynk.
-        </div>
-        <div class="card-tech-list">
-          <span>ESP8266</span>
-          <span>C++</span>
-          <span>IoT</span>
-        </div>
-      </article>
 
-      <article class="project-card" data-title="Home Automation" 
-               data-desc="Voice and sensor controlled home automation." 
-               data-tech="Arduino, Sensors" data-img="Doc/Projects/smarthome_project.jpg">
-        <div class="card-header">
-          <i class="far fa-folder-open folder-icon"></i>
-          <div class="card-links">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="skill-category">
+          <h3><i class="fas fa-microchip"></i> Hardware & IoT</h3>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>Arduino / ESP32</p>
+              <p class="percent">95%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 95%"></span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>Circuit Design</p>
+              <p class="percent">80%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 80%"></span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>Sensors (MQ2, DHT)</p>
+              <p class="percent">90%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 90%"></span>
+            </div>
           </div>
         </div>
-        <h3 class="card-title">Home Automation</h3>
-        <div class="card-desc">
-          Arduino-based central control unit for lights, fans, and gas leak detection (MQ2).
-        </div>
-        <div class="card-tech-list">
-          <span>Arduino</span>
-          <span>Sensors</span>
-          <span>C</span>
-        </div>
-      </article>
 
-    </div>
-  </div>
-</section>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools</h3>
 
-<section id="experience" class="section-dark reveal">
-  <div class="container">
-    <h2 class="section-header"><span class="text-accent">04.</span> Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Dec 2023 - Apr 2024</div>
-        <div class="timeline-content">
-          <h3>Supply Quality Management Intern</h3>
-          <h4>Tata Electronics | Kolar, Karnataka</h4>
-          <p>
-            Worked on-site ensuring component quality standards. Gained industrial exposure to 
-            electronics manufacturing and supply chain logistics.
-          </p>
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>MATLAB</p>
+              <p class="percent">85%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 85%"></span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>KiCad / Multisim</p>
+              <p class="percent">75%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 75%"></span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-info">
+              <p>Git & GitHub</p>
+              <p class="percent">80%</p>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--w: 80%"></span>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="education" class="section-dark reveal">
-  <div class="container">
-    <h2 class="section-header"><span class="text-accent">05.</span> Education</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2023 - 2027</div>
-        <div class="timeline-content">
-          <h3>B.E. Electronics & Communication</h3>
-          <h4>CMR Institute of Technology, Bengaluru</h4>
-          <p>Current CGPA: 6.0 | Focus: Embedded Systems & AI</p>
+  <section id="projects" class="section-dark reveal">
+    <div class="container">
+      <h2 class="section-header"><span class="text-accent">03.</span> Featured Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card" data-title="PWD Communication Device"
+          data-desc="Assistive technology using Micro:Bit to help persons with disabilities communicate."
+          data-tech="Python, Micro:Bit" data-img="Doc/Projects/pwd.jpg">
+          <div class="card-header">
+            <i class="far fa-folder-open folder-icon"></i>
+            <div class="card-links">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="card-title">PWD Assistive Device</h3>
+          <div class="card-desc">
+            A Micro:Bit based system converting slight movements into text communication.
+          </div>
+          <div class="card-tech-list">
+            <span>Python</span>
+            <span>Micro:Bit</span>
+            <span>Embedded</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-title="Smart Agriculture"
+          data-desc="IoT System for soil monitoring and automated irrigation." data-tech="C++, ESP8266, Blynk"
+          data-img="Doc/Projects/iot.png">
+          <div class="card-header">
+            <i class="far fa-folder-open folder-icon"></i>
+            <div class="card-links">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="card-title">Smart Agriculture</h3>
+          <div class="card-desc">
+            Automated irrigation system using soil moisture sensors and cloud logging via Blynk.
+          </div>
+          <div class="card-tech-list">
+            <span>ESP8266</span>
+            <span>C++</span>
+            <span>IoT</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-title="Home Automation"
+          data-desc="Voice and sensor controlled home automation." data-tech="Arduino, Sensors"
+          data-img="Doc/Projects/smart_home.jpg">
+          <div class="card-header">
+            <i class="far fa-folder-open folder-icon"></i>
+            <div class="card-links">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="card-title">Home Automation</h3>
+          <div class="card-desc">
+            Arduino-based central control unit for lights, fans, and gas leak detection (MQ2).
+          </div>
+          <div class="card-tech-list">
+            <span>Arduino</span>
+            <span>Sensors</span>
+            <span>C</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section-dark reveal">
+    <div class="container">
+      <h2 class="section-header"><span class="text-accent">04.</span> Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Dec 2023 - Apr 2024</div>
+          <div class="timeline-content">
+            <h3>Supply Quality Management Intern</h3>
+            <h4>Tata Electronics | Kolar, Karnataka</h4>
+            <p>
+              Worked on-site ensuring component quality standards. Gained industrial exposure to
+              electronics manufacturing and supply chain logistics.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2021 - 2024</div>
-        <div class="timeline-content">
-          <h3>Diploma in ECE</h3>
-          <h4>Government Polytechnic, Rabakavi-Banahatti</h4>
-          <p>Score: 80.10% | Foundation in Analog & Digital Electronics</p>
+    </div>
+  </section>
+
+  <section id="education" class="section-dark reveal">
+    <div class="container">
+      <h2 class="section-header"><span class="text-accent">05.</span> Education</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - 2027</div>
+          <div class="timeline-content">
+            <h3>B.E. Electronics & Communication</h3>
+            <h4>CMR Institute of Technology, Bengaluru</h4>
+            <p>Current CGPA: 6.0 | Focus: Embedded Systems & AI</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - 2024</div>
+          <div class="timeline-content">
+            <h3>Diploma in ECE</h3>
+            <h4>Government Polytechnic, Rabakavi-Banahatti</h4>
+            <p>Score: 80.10% | Foundation in Analog & Digital Electronics</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section-dark reveal">
+    <div class="container">
+      <h2 class="section-header"><span class="text-accent">06.</span> Certifications</h2>
+
+      <div class="cert-gallery">
+        <div class="cert-item">
+          <img src="documents/certificates/certificate_1.png" alt="Certificate 1">
+        </div>
+        <div class="cert-item">
+          <img src="documents/certificates/certificate_2.png" alt="Certificate 2">
+        </div>
+        <div class="cert-item">
+          <img src="documents/certificates/certificate_3.png" alt="Certificate 3">
+        </div>
+        <div class="cert-item">
+          <img src="documents/certificates/certificate_4.png" alt="Certificate 4">
+        </div>
+        <div class="cert-item">
+          <img src="documents/certificates/certificate_5.png" alt="Certificate 5">
+        </div>
+        <div class="cert-item">
+          <img src="documents/certificates/certificate_6.png" alt="Certificate 6">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="certModal" class="modal-backdrop">
+    <div class="cert-modal-content">
+      <button class="modal-close cert-close">&times;</button>
+      <img id="certModalImg" src="" alt="Certificate Preview">
+    </div>
+  </div>
+
+  <section id="contact" class="section-dark reveal">
+    <div class="container contact-container">
+      <h2 class="section-header"><span class="text-accent">06.</span> Get In Touch</h2>
+      <p class="contact-sub">Have a project idea or want to discuss IoT? My inbox is always open.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+
+        <button type="submit" class="btn-primary full-width">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <a href="https://github.com/prashantmeni" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/prashant-meni-400548297" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:prashantmeni2005@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <footer class="footer">
+        <p>Designed & Built by Prashant Meni</p>
+      </footer>
+    </div>
+  </section>
+
+  <div id="projectModal" class="modal-backdrop">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrapper"><img id="modalImg"></div>
+        <div class="modal-text">
+          <h2 id="modalTitle"></h2>
+          <p id="modalTech" class="modal-tech"></p>
+          <p id="modalDesc"></p>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<section id="certifications" class="section-dark reveal">
-  <div class="container">
-    <h2 class="section-header"><span class="text-accent">06.</span> Certifications</h2>
-    <div class="cert-grid">
 
-      <div class="cert-card">
-        <div class="cert-img-wrapper">
-          <img src="Doc/Certificates/sensor_cert.jpg" alt="Sensor Design" onerror="this.src='https://placehold.co/600x400/112240/64ffda?text=Certificate+Image'">
-        </div>
-        <div class="cert-content">
-          <h3>Sensors & Circuit Design</h3>
-          <p class="cert-issuer">University of Colorado Boulder</p>
-          <div class="cert-meta"><span class="cert-date">Issued: 2025</span></div>
-        </div>
-      </div>
 
-      <div class="cert-card">
-        <div class="cert-img-wrapper">
-          <img src="Doc/Certificates/tata_cert.jpg" alt="Tata Internship" onerror="this.src='https://placehold.co/600x400/112240/64ffda?text=Certificate+Image'">
-        </div>
-        <div class="cert-content">
-          <h3>Internship Completion</h3>
-          <p class="cert-issuer">Tata Electronics</p>
-          <div class="cert-meta"><span class="cert-date">Issued: 2024</span></div>
-        </div>
-      </div>
+  <script src="script.js"></script>
 
-      <div class="cert-card">
-        <div class="cert-img-wrapper">
-          <img src="https://placehold.co/600x400/112240/64ffda?text=Hackathon+Cert" alt="Hackathon">
-        </div>
-        <div class="cert-content">
-          <h3>Hackathon Participant</h3>
-          <p class="cert-issuer">Krishi Innovators</p>
-          <div class="cert-meta"><span class="cert-date">Issued: 2024</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section-dark reveal">
-  <div class="container contact-container">
-    <h2 class="section-header"><span class="text-accent">07.</span> Get In Touch</h2>
-    <p class="contact-sub">Have a project idea or want to discuss IoT? My inbox is always open.</p>
-    
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-      </div>
-      <textarea name="message" rows="5" placeholder="Message" required></textarea>
-      <button type="submit" class="btn-primary full-width">Send Message</button>
-    </form>
-
-    <div class="social-links">
-      <a href="https://github.com/prashantmeni" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/prashant-meni-400548297" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:prashantmeni2005@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
-</section>
-
-<footer class="system-footer">
-  <div class="status-item">
-    <span class="status-label">SYSTEM:</span>
-    <span class="status-value online">ONLINE <i class="fas fa-circle"></i></span>
-  </div>
-  <div class="status-item">
-    <span class="status-label">LOC:</span>
-    <span class="status-value">Bengaluru, IN</span>
-  </div>
-  <div class="status-item">
-    <span class="status-label">TIME:</span>
-    <span class="status-value" id="system-time">00:00:00 UTC</span>
-  </div>
-  <div class="status-item desktop-only">
-    <span class="status-label">LATENCY:</span>
-    <span class="status-value">24ms</span>
-  </div>
-  <div class="copyright">
-    &copy; 2026 Prashant Meni
-  </div>
-</footer>
-
-<div id="projectModal" class="modal-backdrop">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
-    <div class="modal-grid">
-      <div class="modal-img-wrapper"><img id="modalImg"></div>
-      <div class="modal-text">
-        <h2 id="modalTitle"></h2>
-        <p id="modalTech" class="modal-tech"></p>
-        <p id="modalDesc"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<button id="backToTop" class="icon-btn" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
-
-<script src="script.js"></script>
-
+  <button id="backToTop" class="icon-btn" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
 </body>
+
+
 </html>
